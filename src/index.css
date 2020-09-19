@@ -1,0 +1,46 @@
+html{
+  overflow: hidden;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 1rem;
+}
+h1{
+  text-align: center;
+}
+
+.controls{ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 1rem;
+  height: 30vh;
+
+}
+.controls>.group {
+  flex: 0 0 50%;
+  display: grid;
+}
+.controls>:not(.group) {
+  flex: 0 0 100%;
+}
+.group>span{
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 30ch;
+  margin: 0 auto;
+}
+#cmdOutput{
+  
+}
+.button{
+  margin: 0 40px;
+}
+.controls hr{
+  margin: .5rem 0;
+}
