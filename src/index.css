@@ -9,7 +9,7 @@ h1{
   text-align: center;
 }
 
-.controls{ 
+.controls{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,8 +35,18 @@ h1{
   width: 30ch;
   margin: 0 auto;
 }
+.group.inline{
+  display: inline;
+  margin-top: .5rem;
+}
+.group.inline:last-child{
+  text-align: right;
+}
 #cmdOutput{
-  
+  resize: none;
+  margin-top: 10px;
+  padding: 3px;
+  height: 40vh;
 }
 .button{
   margin: 0 40px;

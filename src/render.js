@@ -1,11 +1,16 @@
-const { remote } = require('electron');
+const { remote,shell } = require('electron');
 const {dialog,app} = remote;
+
 var child_process = require('child_process');
 
 //Elements
 const sceneBtn = document.getElementById('sceneBtn');
 const outputBtn = document.getElementById('outputBtn');
 const startBtn = document.getElementById('startBtn');
+
+const outputFolder = document.getElementById('outputFolder');
+const repkg = document.getElementById('RePKG');
+
 const scenePathSpan = document.getElementById('scenePath');
 const outputPathSpan = document.getElementById('outputPath');
 let scenePath="",outputPath="";
@@ -30,7 +35,7 @@ sceneBtn.onclick = e =>{
 		scenePathSpan.setAttribute('title', result.filePaths[0]);
 		sceneBtn.classList.remove('is-warning');
 		sceneBtn.classList.add('is-primary');
-		
+
 		if(outputPath!="")
 			startBtn.removeAttribute('disabled');
 	}).catch(err => {
@@ -61,11 +66,11 @@ outputBtn.onclick = e => {
 };
 
 startBtn.onclick= e =>{
-	var child = child_process.exec(`"${app.getAppPath()}\\repkg\\RePKG.exe" extract -e tex -s -o "${outputPath}" "${scenePath}"`); 
+	var child = child_process.exec(`"${app.getAppPath()}\\repkg\\RePKG.exe" extract -e tex -s -o "${outputPath}" "${scenePath}"`);
 	console.log("hello");
-	// use event hooks to provide a callback to execute when data are available: 
+	// use event hooks to provide a callback to execute when data are available:
 	child.stdout.on('data', function(data) {
-		console.log(data.toString()); 
+		console.log(data.toString());
 	});
 	child.on('exit',e=>	{
 		console.log("done");
@@ -74,3 +79,11 @@ startBtn.onclick= e =>{
 		console.log("e");
 	});
 }
+
+
+outputFolder.on('click',e=>{
+
+})
+repkg.on('click',e=>{
+
+})
