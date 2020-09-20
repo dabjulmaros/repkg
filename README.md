@@ -2,11 +2,11 @@
 Wallpaper engine PKG extractor/TEX to image converter
 Forked from https://github.com/notscuffed/repkg
 
-#Download & Extraction
+# Download & Extraction
 To Use Click the Green "Code" button and select Download Zip.
 Extract it, go to repkg-installer>repkg-installer>repkgGUI
 
-#Usage
+# Usage
 Double Click rpkgui-1.0.0.
 Is just 3 buttons.
 First select a scene.pkg,
